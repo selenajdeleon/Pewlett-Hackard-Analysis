@@ -1,11 +1,11 @@
---Create queries to search age and 
---retirement package eligibility status
+-- Create queries to search age and 
+-- retirement package eligibility status
 
 
 SELECT * FROM employees;
 
 
---boss gave 1952-1955
+-- boss gave 1952-1955
 
 SELECT first_name, last_name
 FROM employees
@@ -29,7 +29,7 @@ FROM
 WHERE birth_date BETWEEN '1952-01-01' AND '1952-12-31';
 
 
---1953
+-- 1953
 
 SELECT first_name, last_name
 FROM employees
@@ -42,7 +42,7 @@ FROM
 WHERE birth_date BETWEEN '1953-01-01' AND '1953-12-31';
 
 
---1954
+-- 1954
 
 SELECT first_name, last_name
 FROM employees
@@ -55,7 +55,7 @@ FROM
 WHERE birth_date BETWEEN '1954-01-01' AND '1954-12-31';
 
 
---1955
+-- 1955
 
 SELECT first_name, last_name
 FROM employees
@@ -81,7 +81,7 @@ WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
 AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
 
 
---retirees table
+-- retirees table
 
 SELECT first_name, last_name
 INTO retirement_info
@@ -95,7 +95,7 @@ SELECT COUNT(*)
 FROM retirement_info;
 
 
---joins
+-- joins
 
 DROP TABLE retirement_info;
 
@@ -105,6 +105,7 @@ INTO retirement_info
 FROM employees
 WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
 AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
+
 -- Check the table
 SELECT * FROM retirement_info;
 
@@ -126,7 +127,7 @@ FROM retirement_info
 LEFT JOIN dept_emp
 ON retirement_info.emp_no = dept_emp.emp_no;
 
---add aliases
+-- add aliases
 SELECT ri.emp_no,
     ri.first_name,
     ri.last_name,
@@ -143,7 +144,7 @@ FROM departments as d
 INNER JOIN dept_manager as dm
 ON d.dept_no = dm.dept_no;
 
---Left Join retirement_info and dept_emp create table
+-- Left Join retirement_info and dept_emp create table
 SELECT ri.emp_no,
     ri.first_name,
     ri.last_name,
@@ -158,3 +159,9 @@ SELECT * FROM current_emp;
 
 SELECT COUNT(*) FROM current_emp;
 
+-- Employee count by department number
+SELECT COUNT(ce.emp_no), de.dept_no
+FROM current_emp as ce
+LEFT JOIN dept_emp as de
+ON ce.emp_no = de.emp_no
+GROUP BY de.dept_no;
