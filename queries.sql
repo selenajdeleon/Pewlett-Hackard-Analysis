@@ -148,7 +148,7 @@ ON d.dept_no = dm.dept_no;
 SELECT ri.emp_no,
     ri.first_name,
     ri.last_name,
-    de.to_date
+de.to_date
 INTO current_emp
 FROM retirement_info as ri
 LEFT JOIN dept_emp as de
