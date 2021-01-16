@@ -117,8 +117,7 @@ FROM departments
 INNER JOIN dept_manager
 ON departments.dept_no = dept_manager.dept_no;
 
--- Joining retirement_info and dept_emp tables 
--- left join capture
+-- Joining retirement_info and dept_emp tables left join capture
 SELECT retirement_info.emp_no,
     retirement_info.first_name,
     retirement_info.last_name,
@@ -144,7 +143,7 @@ FROM departments as d
 INNER JOIN dept_manager as dm
 ON d.dept_no = dm.dept_no;
 
---Left Join retirement_info and dept_emp creat table
+--Left Join retirement_info and dept_emp create table
 SELECT ri.emp_no,
     ri.first_name,
     ri.last_name,
@@ -154,3 +153,8 @@ FROM retirement_info as ri
 LEFT JOIN dept_emp as de
 ON ri.emp_no = de.emp_no
 WHERE de.to_date = ('9999-01-01');
+
+SELECT * FROM current_emp;
+
+SELECT COUNT(*) FROM current_emp;
+
