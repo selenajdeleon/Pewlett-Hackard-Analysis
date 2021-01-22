@@ -258,7 +258,7 @@ LEFT JOIN departments as d
 ON (d.dept_no = de.dept_no)
 WHERE d.dept_name = ('Sales');
 
--- Development
+-- Sales & Development
 SELECT ri.emp_no,
 ri.first_name,
 ri.last_name,
