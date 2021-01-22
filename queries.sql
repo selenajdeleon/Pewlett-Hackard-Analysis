@@ -242,12 +242,27 @@ ON (ce.emp_no = de.emp_no)
 INNER JOIN departments AS d
 ON (de.dept_no = d.dept_no);
 
--- Bonus List
+-- Bonus Lists
 -- Sales and Development teams mentor program projections
-SELECT ce.emp_no,
-ce.first_name,
-ce.last_name,
+
+-- Sales
+SELECT ri.emp_no,
+ri.first_name,
+ri.last_name,
 d.dept_name
 -- INTO mentors
-FROM current_emp as ce
-WHERE 
+FROM retirement_info as ri
+LEFT JOIN departments as d
+ON 
+
+
+-- -- Left Join retirement_info and dept_emp create table
+-- SELECT ri.emp_no,
+--     ri.first_name,
+--     ri.last_name,
+-- de.to_date
+-- INTO current_emp
+-- FROM retirement_info as ri
+-- LEFT JOIN dept_emp as de
+-- ON ri.emp_no = de.emp_no
+-- WHERE de.to_date = ('9999-01-01');
