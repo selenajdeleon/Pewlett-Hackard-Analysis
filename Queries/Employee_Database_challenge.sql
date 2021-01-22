@@ -1,23 +1,30 @@
 -- Pewlett Hackard Retirees Challenge (Module 7)
 
--- Use Dictinct with Orderby to remove duplicate rows
-SELECT DISTINCT ON (titles) e.emp_no,
+-- D1:
+
+SELECT e.emp_no,
 e.first_name,
 e.last_name,
-t.title
+ti.title,
+ti.from_date,
+ti.to_date
+INTO retirement_titles
+FROM employees as e
+INNER JOIN titles as ti
+ON (e.emp_no = ti.emp_no)
+WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+ORDER BY emp_no ASC;
 
--- INTO retirees_title
-FROM _______
-ORDER BY _____, _____ DESC;
-
-
--- -- Create new table for retiring employees
---      SELECT emp_no, first_name, last_name
---      INTO retirement_info
---      FROM employees
---      WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
---      AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
-
--- Filter the data on the birth_date column 
--- to retrieve the employees who were born between 1952 and 1955. 
--- Then, order by the employee number.
+-- Use Dictinct with Orderby to remove duplicate rows
+SELECT DISTINCT ON (emp_no) e.emp_no,
+e.first_name,
+e.last_name,
+ti.title,
+ti.from_date,
+ti.to_date
+-- INTO unique_titles
+FROM employees as e
+LEFT JOIN titles as ti
+ON (e.emp_no = ti.emp_no)
+WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+ORDER BY emp_no, e.emp_no ASC;
