@@ -173,7 +173,7 @@ GROUP BY de.dept_no
 ORDER BY de.dept_no;
 
 
--- Boss man's 3 Lists
+-- Boss mans' 3 Lists
 
 SELECT * FROM salaries;
 
@@ -250,19 +250,24 @@ SELECT ri.emp_no,
 ri.first_name,
 ri.last_name,
 d.dept_name
--- INTO mentors
+-- INTO 
 FROM retirement_info as ri
+INNER JOIN dept_emp as de
+ON (de.emp_no = ri.emp_no)
 LEFT JOIN departments as d
-ON 
+ON (d.dept_no = de.dept_no)
+WHERE d.dept_name = ('Sales');
 
-
--- -- Left Join retirement_info and dept_emp create table
--- SELECT ri.emp_no,
---     ri.first_name,
---     ri.last_name,
--- de.to_date
--- INTO current_emp
--- FROM retirement_info as ri
--- LEFT JOIN dept_emp as de
--- ON ri.emp_no = de.emp_no
--- WHERE de.to_date = ('9999-01-01');
+-- Development
+SELECT ri.emp_no,
+ri.first_name,
+ri.last_name,
+d.dept_name
+-- INTO 
+FROM retirement_info as ri
+INNER JOIN dept_emp as de
+ON (de.emp_no = ri.emp_no)
+LEFT JOIN departments as d
+ON (d.dept_no = de.dept_no)
+WHERE d.dept_name
+   IN ('Sales', 'Development');
