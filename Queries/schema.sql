@@ -58,5 +58,6 @@ CREATE TABLE titles (
 	from_date DATE NOT NULL,
 	to_date DATE NOT NULL,
 	FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
-	PRIMARY KEY (emp_no, title, from_date)
+	PRIMARY KEY (emp_no, title, to_date)
 );
+-- changed composite key from ending in from_date to to_date
