@@ -13,4 +13,7 @@ The mentorship program intends to initiate transitional employment for upcoming 
 #### Images of the resulting data from the queries ran
 [insert images]
 
+![alt text](Images/retirement-titles-table.png)
+
+
 ### SUMMARY:
