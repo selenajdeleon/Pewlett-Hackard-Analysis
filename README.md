@@ -1,11 +1,11 @@
 # Pewlett-Hackard-Analysis
 
 ### OVERVIEW: 
-After a thorough deep-dive in the dataset (exploratory analysis, descriptive analysis, etc.) from Pewitt-Hackard, two additional queries were run on the data to reflect the number of retiring employees per title, so that the company may prepare for the “silver tsunami” of retirees, as well as to establish a mentorship program to help facilitate a smooth transition of titles within the company. These two queries may be found in the Queries folder, titled [Employee_Database_challenge](/Users/selenajdeleon/Desktop/Analysis_Projects/Pewlett-Hackard-Analysis/Queries/Employee_Database_challenge.sql).
+After a thorough deep-dive in the dataset (exploratory analysis, descriptive analysis, etc.) from Pewitt-Hackard, two additional queries were run on the data to reflect the number of retiring employees per title, so that the company may prepare for the “silver tsunami” of retirees, as well as to establish a mentorship program to help facilitate a smooth transition of titles within the company. These two queries may be found in the Queries folder, titled [Employee_Database_challenge](path/to/Employee_Database_challenge.sql).
 
 #### Number of Retirees Per Title
 The query for the number of retiring employees per title (D1) yields a table with 133,776 rows, which is located in the Data folder, titled retirement_titles.csv. We noticed that some of the rows in the table had repeating employee numbers due to a change in position or title of some employees (i.e. promotion). We revised this query to reflect the retiring employees current titles in the table title unique_titles, which yields a table with 90,398 rows. We then counted the number of retiring employees by title, to break down how many positions will have upcoming retirees. A preview of this query is displayed below: 
-![alt text](Images/retirees-per-title.png)
+![alt text](Images/retirees_per_title.png)
 
 Further, a table was created the reflect the number of retiring titles to give a quick overview of how many people from each title the company will need to transition from having. See query preview below:
 ![alt text](Images/retiring_titles.png)
