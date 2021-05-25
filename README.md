@@ -1,19 +1,24 @@
 # Pewlett-Hackard-Analysis
 
 ### OVERVIEW: 
-#### An overview of the two additional queries ran for Pewitt-Hackard
-After a thorough deep-dive in data from Pewitt-Hackard, our team ran queries on the data to reflect the number of employees, by title, who are approaching retirement so that the company may prepare for the “silver tsunami” of retirees, as well as to establish a mentorship program to help facilitate a smooth transition of titles within the company. These two queries may be found in the Employee_Database_challenge.sql file, in the Queries section of our analysis.
+After a thorough deep-dive in the dataset (exploratory analysis, descriptive analysis, etc.) from Pewitt-Hackard, two additional queries were run on the data to reflect the number of retiring employees per title, so that the company may prepare for the “silver tsunami” of retirees, as well as to establish a mentorship program to help facilitate a smooth transition of titles within the company. These two queries may be found in the Queries folder, titled [Employee_Database_challenge](/Users/selenajdeleon/Desktop/Analysis_Projects/Pewlett-Hackard-Analysis/Queries/Employee_Database_challenge.sql).
 
-The query for the number of retiring employees by title (D1) yields a table with 133,776 rows (retirement_titles.csv). We noticed that some of the rows in the table had repeating employee numbers due to the change in position or role of certain employees. We revised this query to reflect the retiring employees current titles (unique_titles), which yields a table with 90,398 rows. We then counted the number of retiring employees by title, to break down how many positions will have upcoming retirees.
+#### Number of Retirees Per Title
+The query for the number of retiring employees per title (D1) yields a table with 133,776 rows, which is located in the Data folder, titled retirement_titles.csv. We noticed that some of the rows in the table had repeating employee numbers due to a change in position or title of some employees (i.e. promotion). We revised this query to reflect the retiring employees current titles in the table title unique_titles, which yields a table with 90,398 rows. We then counted the number of retiring employees by title, to break down how many positions will have upcoming retirees. A preview of this query is displayed below: 
+![alt text](Images/retirees-per-title.png)
 
-The mentorship program intends to initiate transitional employment for upcoming retirees, on a part-time basis, in order to train the next phase of employees in their mentor’s former titles. For example, the retiring Senior Engineers would train the next generation of Senior Engineers to come. The program will allow a smooth transition of responsibility within the company. 
+Further, a table was created the reflect the number of retiring titles to give a quick overview of how many people from each title the company will need to transition from having. See query preview below:
+![alt text](Images/retiring_titles.png)
 
+#### Potential Mentors Program
+The mentorship program intends to initiate transitional employment for upcoming retirees, on a part-time basis, in order to train the next phase of employees in their mentor’s former titles. For example, the retiring Senior Engineers would train the next generation of Senior Engineers to come. The program will allow a smooth transition of responsibility within the company. The criteria for eligibilty includes employees whose birth dates are between January 1, 1965 and December 31, 1965. The mentorship_eligibilty.cvs file is located in the Data folder. The query written is displayed below:
+![alt text](Images/eligible_mentors.png)
 
 ### RESULTS:
-#### Images of the resulting data from the queries ran
-[insert images]
-
+#### Results from Two Queries
 ![alt text](Images/retirement-titles-table.png)
+
+![alt text](Images/unique-titles-table.png)
 
 
 ### SUMMARY:
