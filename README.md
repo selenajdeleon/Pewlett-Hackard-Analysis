@@ -15,7 +15,7 @@ Next, the number of retiring employees by title was counted to break down how ma
 ![alt text](Images/retirees_per_title.png)
 
 Further, a table was created the reflect the number of 
-![retiring](retiring titles.csv) titles to give a quick overview of how many people from each title the company will need to transition from having. See a preview of the query below:
+![retiring](retiring_titles.csv) titles to give a quick overview of how many people from each title the company will need to transition from having. See a preview of the query below:
 ![alt text](Images/retiring_titles.png)
 
 ### Potential Mentors Program
@@ -55,4 +55,5 @@ Another table to consider in order to expand the mentorship program may be to lo
 
 One more table to consider would be the ![retirees_dept.csv](Data/Additional_Tables/retirees_dept.csv) table (same folder as current_emp). This table gives insight on which department(s) have the highest demand or need for transitionary titles. See image below: 
 ![alt text](Images/dept_demand.png)
+
 As we can see above, department 005, or the Development department has the highest number of retiring employees, which corresponds to the highest demand.
