@@ -15,7 +15,7 @@ Next, the number of retiring employees by title was counted to break down how ma
 ![alt text](Images/retirees_per_title.png)
 
 Further, a table was created the reflect the number of 
-![retiring](retiring_titles.csv) titles to give a quick overview of how many people from each title the company will need to transition from having. See a preview of the query below:
+![retiring_titles](retiring_titles.csv) to give a quick overview of how many people from each title the company will need to transition from having. See a preview of the query below:
 ![alt text](Images/retiring_titles.png)
 
 ### Potential Mentors Program
