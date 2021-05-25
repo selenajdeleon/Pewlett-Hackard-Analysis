@@ -146,6 +146,7 @@ WHERE de.to_date = ('9999-01-01');
 SELECT * FROM current_emp;
 
 SELECT COUNT(*) FROM current_emp;
+-- 33118
 
 
 -- Employee count by department number
